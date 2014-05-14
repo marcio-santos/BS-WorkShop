@@ -1,0 +1,196 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sem título</title>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://bodysystems.net/_ferramentas/workshop/js/jquery.tokeninput.js"></script>
+<script type="text/javascript" src="http://bodysystems.net/_ferramentas/workshop/js/profacad.js"></script>
+<link rel="stylesheet" href="http://bodysystems.net/_ferramentas/workshop/style/token-input.css" type="text/css" />
+<link rel="stylesheet" href="http://bodysystems.net/_ferramentas/workshop/style/token-input-facebook.css" type="text/css" />
+
+<style>
+.frame_cad {
+	color: #666;
+	width: 800px;
+	height: 480px;	
+	border: 1px solid #c0c0c0;
+	display: block;
+	font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+
+}
+.title_cad {
+	font-size:22px;
+	line-height:160%;
+	color: #666;
+	width: 800px;
+	text-align:center;
+	display:inline-block;	
+	border-bottom: 2px solid #666;
+}
+#lcol {
+	width:335px;
+	height:440px;
+	display:block;
+	float:left;
+	padding:5px;
+	
+}
+#rcol {
+	width: 445px;
+	height:440px;
+	display:block;
+	float: left;
+	padding: 5px;
+}
+
+.legenda {
+	line-height:90%;
+	font-size:12px;
+	vertical-align:bottom;
+	text-align:center;
+}
+
+.img-circular{
+ width: 128px;
+ height: 128px;
+ background-image: url('https://scontent-a-lga.xx.fbcdn.net/hphotos-frc3/t1/1511313_711538472203514_588429218_n.jpg');
+ background-size: cover;
+ display: block;
+ border-radius: 100px;
+ -webkit-border-radius: 100px;
+ -moz-border-radius: 100px;
+ margin-left:auto;
+ margin-right:auto;
+ margin-top: 20px;
+ 
+}
+
+ul {
+	text-decoration:none;	
+	padding: 0px;
+	margin: 0px;
+
+}
+
+
+.dados {
+	margin-left:auto;
+	margin-right:auto;
+    display: block;
+    padding-left:3em;
+    list-style: none;
+    text-align: left;
+}
+
+#licenca {
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	padding-left:20px;
+	padding-top: 20px;
+	font-size:12px;
+	}
+input.cpf {
+	font-size:2em;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	width: 240px;
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	border:1px solid #CCC;
+	padding: 5px;
+	text-align:center;
+}
+
+.nome {
+	margin-top:20px;
+}
+
+.logo {
+	display:block;
+	padding:1px;
+	float:left;
+	line-height:106%;
+}
+
+#logos_lic {
+	margin-left:15px;
+	display:block;
+	
+}
+
+#descricao {
+	font-size:12px;
+	line-height:106%;
+	display:block;
+	padding:15px;
+	
+	}
+	
+#nome_academias {
+	display:block;
+	font-size:18px;
+	line-height:90%;
+	padding: 15px;
+	padding-bottom: 0px;
+}
+#lista_academias {
+	display:block;
+	font-size: 20px;
+	margin-left:20px;
+	margin-top: 20px;
+	width: 380px;
+
+}
+</style>
+</head>
+
+<body>
+<div id="frame_cad" class="frame_cad">
+	<div id="title_cad" class="title_cad">
+    	Seu Licenciamento LesMills
+    </div>
+	<div id="lcol" class="lcol">
+    	<ul class="dados">
+        	<li id="FB">
+            	<div id="foto" class="img-circular">
+                </div>
+            </li>
+            <li id="CPF">
+            	<p class="legenda">Digite seu CPF</p>
+            	<input type="text" class="cpf" value="999.999.999-04" />
+            </li>
+            <li id="ENDE">
+            	<span id="nome" class="nome dados">Márcio Alex dos Santos</span>
+                <span class="dados" id="endereco">Rua Coral, 71 - apto 1101</span>
+                <span class="dados" id="cidade_uf">Guarulhos - SP</span>
+                <span class="dados" id="cep">CEP 07115-060</span>
+            </li>
+        </ul>
+	</div>
+	<div id="rcol" class="rcol">
+    	<span id="licenca">Licenciamento</span>
+        <span id="logos_lic">
+        	<img class="logo" src="http://bodysystems.net/images/gestor/BA.jpg" />
+            <img class="logo" src="http://bodysystems.net/images/gestor/BP.jpg" />
+            <img class="logo" src="http://bodysystems.net/images/gestor/BS.jpg" />
+            <img class="logo" src="http://bodysystems.net/images/gestor/PJ.jpg" />
+        </span><hr style="clear:both;border:0px;border-bottom:1px solid #e9e9e9; padding-top:10px;"/>
+        <!--<span id="descricao">
+        	Estamos melhorando cada vez mais a intensidade de nosso relacionamento com você. E neste sentido, será muito importante conhecer um pouco do seu 'dia-a-dia'. Gostaríamos então que você nos informasse em quais academias está atualmente trabalhando.
+        </span> -->
+        <span id="nome_academias">Atualize seu perfil!</span>
+        <span id="descricao">Escreva o nome de todas as academias em que você trabalha.<br>
+        Para adicionar 
+        cada uma escreva o nome e depois tecle 'enter'. </span>
+        <span id="academias">
+        <input type="text" id="demo-input-facebook-theme" class="lista_academias" />
+        <input type="button" value="Submit" />
+        
+        </span>
+	</div>
+</div>
+</body>
+</html>

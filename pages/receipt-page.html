@@ -1,0 +1,36 @@
+﻿<div class="frame">
+<div class="head" id="head1">{HEAD1}</div>
+<div class="disclaimer" id="head2">{HEAD2}.</div><br/>
+<div class="card">
+	<div class="tab"><div style="font-size:26px;padding:0px;line-height:70%;" id="card-day">{CDY}</div><div style="font-size:11px;padding:0px;line-height:70%;" id="card-month">{CMONTH}</div></div>
+	<div class="detalhe-card" id="card-extend-date">{EXTEND-DATE}</div>
+    <div class="head-card" id="card-evento-nome">{EVENTO}</div>
+    <div id="endereco">
+    <div class="sub-head-card" id="ende-local">LOCAL</div>
+    <div class="detalhe-card" id="ende-ws">{ENDERECO}</div>
+    </div>
+    <div id="logo-correio" class="hidden"><img src="../images/receipt/logo_correios.png"/></div>
+    <div class="autentica">
+    <hr style="border:0; border-bottom:dashed 1px gray;clear:both;" />
+    <div style="font-size:9px;padding:0px;">AUTENTICAÇÃO</div>
+    <div class="transacao" id="card-transacaoid">{TRANSACAOID}</div>
+    </div>
+</div>
+<div class="qrcode" id="qrcode">
+<img src="{CODE}" style="display:block; margin-left:auto; margin-right:auto;" width="150" height="150" />
+<div style="display:block; margin-left:auto; margin-right:auto; margin-top:10px; width:140px; font-size:11px;">
+use o leitor de QRCode para salvar este recibo em seu celular. <a href="#" target="_blank">Clique aqui para saber mais...</a>
+</div>
+</div>
+<div class="info" id="lembre-se">
+Lembre-se:<br/>
+{LEMBRE-SE}
+<div style="margin-top:10px;font-weight:bold;" id="ende-remessa">{REMESSA}</div>
+</div>
+<br style="clear:both" />
+<div align="center" style="display:block;margin-right:auto;margin-top:auto; padding-top:30px;" id="bt-facebook">
+<a href="#">
+<img src="../images/receipt/facebook_bt.png"  />
+</a>
+</div>
+</div>

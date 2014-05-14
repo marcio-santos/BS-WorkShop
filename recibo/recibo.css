@@ -1,0 +1,112 @@
+@charset "utf-8";
+/* CSS Document */
+.frame {
+	background-image:url(../images/receipt/background.png);
+	background-repeat:no-repeat;
+	height:510px; ;
+	max-width:640px;
+	width:100%;
+	font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+	display:block;
+	padding-top:10px;
+
+}
+.head {
+	margin-top:10px;
+	font-size:24px;
+	font-weight:bold;
+	padding-bottom:0px;
+	text-align:center;
+	margin-left:0px;
+}
+
+.head-card {
+	font-size:16px;
+	font-weight:bold;
+	float:left;
+	min-width:215px;
+}
+.sub-head-card {
+	margin-top:1px;
+	font-size:13px;
+	float:left;
+	min-width:215px;
+}
+.detalhe {
+	min-width:215px;
+	font-size:9px;
+}
+.detalhe-card {
+	min-width:215px;
+	font-size:11px;
+	width:180px;
+	float:left;	
+}
+.disclaimer {
+	min-width:215px;
+	font-size:13px;
+	text-align:left;
+	margin-left:0px;
+	text-align:center;
+}
+.card {
+	background-image:url(../images/receipt/back_receipt.png);
+	background-repeat:no-repeat;
+	margin-left:50px;
+	margin-top:10px;
+	height:164px;
+	width:304px;
+	float:left;
+	padding:0px;
+	padding-top:15px;
+}
+
+.logo-correio {
+	float:left;
+	padding:0px;
+	padding-top:10px;
+}
+.tab {
+	height:164px;
+	width:50px;
+	color:white;
+	float:left;
+	margin-right:20px;
+	margin-left:5px;
+	vertical-align:top;
+	text-align:center;
+}
+.hidden {
+	display:none;
+}
+
+.autentica {
+	text-align:left;
+	font-size:14px;
+	font-weight:bold;
+	float:left;
+	min-width:215px;	
+}
+.transacao {
+	font-size:18px;
+	float:left;
+}
+
+.qrcode {
+	float:right;
+	width:240px;
+	margin-top:15px;
+	margin-right:20px;
+	height:250px;
+}
+.lines {
+	alignment-adjust:auto
+	max-width:100%;
+}
+
+.info {
+	font-size:13px;
+	float:left;
+	width:280px;
+	margin-left:50px;
+}

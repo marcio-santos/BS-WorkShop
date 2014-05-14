@@ -1,0 +1,336 @@
+<<<<<<< HEAD
+<form id="frm_resume" name="frm_Resume" method="post" action="">
+<input type="hidden" id="h_action" name="h_action" value="0" />
+<input type="hidden" id="h_transacao" name="h_transacao" value="{UUID}" />
+<input type="hidden" id="h_progs" name="h_progs" value="{QTD_PROGS}" />
+<input type="hidden" id="h_valor_por_programa" name="h_valor_por_programa" value="{VALOR_1}" />
+<input type="hidden" id="h_valor_boleto" name="h_valor_boleto" value="" />
+<input type="hidden" id="h_valor_cartao" name="h_valor_cartao" value="" />
+<input type="hidden" id="h_valor_referencia_ws" name="h_valor_referencia_ws" value="{VALOR_REF_WS}" />
+<input type="hidden" id="h_valor_ws" name="h_valor_ws" value="" />
+<input type="hidden" id="h_valor_cobrado" name="h_valor_cobrado" value="" />
+<input type="hidden" id="h_retirada_kit" name="h_retirada_kit" value="" />
+<input type="hidden" id="h_nivel_bonus" name="h_nivel_bonus" value="{NIVEL_BONUS}" />
+<input type="hidden" id="h_valor_frete" name="h_valor_frete" value="0" />
+<input type="hidden" id="h_formaPagto" name="h_formaPagto" value="boleto" />
+<input type="hidden" id="h_cpf" name="h_cpf" value="" />
+<input type="hidden" id="h_siteid" name="h_siteid" value="0" />
+<input type="hidden" id="h_evoid" name="h_evoid" value="0" />
+<input type="hidden" id="h_nome" name="h_nome" value="{CLIENTE}" />
+<input type="hidden" id="h_email" name="h_email" value="0" />
+<input type="hidden" id="h_logradouro" name="h_logradouro" value="" />
+<input type="hidden" id="h_numero" name="h_numero" value="" />
+<input type="hidden" id="h_complemento" name="h_complemento" value="" />
+<input type="hidden" id="h_bairro" name="h_bairro" value="" />
+<input type="hidden" id="h_cidade" name="h_cidade" value="" />
+<input type="hidden" id="h_uf" name="h_uf" value="" />
+<input type="hidden" id="h_cep" name="h_cep" value="" />
+<input type="hidden" id="h_evento_descricao" name="h_evento_descricao" value="{EVENTO_NOME}" />
+<input type="hidden" id="h_evento_id" name="h_evento_id" value="{EVENTO_ID}" />
+<input type="hidden" id="h_cnab" name="h_cnab" value="{CNAB}" />
+<input type="hidden" id="h_sigla" name="h_sigla" value="{SIGLA}" />
+<input type="hidden" id="h_finalizado" name="h_finalizado" value="0" />
+</form>
+<div id="table_end" style="display:none;margin-top:15px;">
+    	<table width="350" align="center">
+        	<tr><td style="font-size:16px">Faça agora o seu pagamento!</td></tr>
+            <tr><td id="botao" style="padding:25px;"></td></tr>
+        </table>
+    </div>
+<div style="font-size:1.8em; font-family:Verdana, Geneva, sans-serif" align="center">{NOME_EVENTO}</div>
+<div id="frame" class="" align="center">
+<div id="pagto-final">
+    <table class="frame">
+        <tr>
+            <td valign="top" id="dados_pessoais"    >
+                <div id="head" class="interna">
+                    <img src="_ferramentas/workshop/images/passo-1.png"/>
+                </div>
+                <div id="login" class="interna">
+                    <p class="detalhe">INICIE INFORMANDO OS DADOS ABAIXO:</p>
+                    <div style="float:left">
+                        <ul class="main">
+                            <li><input type="text" size="30" id="cpf" name="cpf" alt="cpf" value="" placeholder="Digite seu CPF" /></li>
+                            <li><input type="password" size="30" id="password" name="password" value="" placeholder="Digite sua senha" /></li>
+                        </ul>
+                    </div>
+                    <div style="float:left;padding:1em;">
+                        <a class="tsc_awb_medium tsc_flat" id="lnk_login" href="javascript:void(0)">&nbsp;checar&nbsp;</a>
+                    </div>
+                    <br style="clear:both" />
+                </div>
+                <div id="response" class="interna"><a href="recuperar-senha" style="font-size:10px; margin-left:1.5em">Esqueci minha senha</a></div>
+                <!--<div id="endereco" class="interna"></div>-->
+                <hr style="border:1px dashed gray;margin-top:10px;margin-bottom:10px;clear:both;" />
+                <div class="interna" id="opt_remessa" style="display:none">
+                <label for="chk_entrega" class="checkbox"><input type="checkbox" id="chk_entrega" name="chk_entrega" checked="checked"/>O endereço acima é o endereço de remessa</label>
+                </div>
+                <div id="frame_entrega" class="interna" style="display:none">
+                	<span style="font-size:1.2em">Endereço para Entrega</span>
+                	<ul class="main" id="novo_endereco_remessa">
+	                    <li><input type="text" id="novo_cep" size="8" value="" placeholder="Digite o CEP" alt="novo_cep" class="input-small" />&nbsp;<a class="tsc_awb_medium tsc_flat" id="lnk_checar_cep" href="#">&nbsp;checar&nbsp;</a></li>
+                        <li class="interna extramargin"><input class="novo_ende" type="text" id="novo_logradouro" size="8" value="" placeholder="Digite o endereço" style="display:none" /></li>
+                        <li class="interna extramargin"><input class="novo_ende" type="text" id="novo_numero" size="8" value="" placeholder="Digite o número" style="display:none" /></li>
+                        <li><input class="novo_ende" type="text" id="novo_complemento" size="10" value="" placeholder="complemento" style="display:none" /></li>
+                        <li class="interna extramargin"><input class="novo_ende" type="text" id="novo_bairro" size="8" value="" placeholder="Digite o bairro" style="display:none" /></li>
+                        <li class="interna extramargin"><input class="novo_ende uneditable-input" type="text" id="novo_cidade" size="8" value="" placeholder="Digite o cidade" style="display:none;" readonly /></li>
+                        <li class="interna extramargin"><input class="novo_ende uneditable-input" type="text" id="novo_uf" size="8" value="" placeholder="Digite o estado" style="display:none;" readonly /></li>
+                        </ul>
+                </div>
+            </td>
+            <td class="" valign="top" id="dados_pagamento">
+            <div id="frame1" style="display:none">
+                <div id="head2" class="interna">
+                    <img src="_ferramentas/workshop/images/passo-2.png"/>
+                </div>
+                <p class="detalhe">*DESEJO RENOVAR MEU LICENCIAMENTO NOS PROGRAMAS ABAIXO:</p>
+                <div id="certificacao" class="interna extramargin">
+                    {CERTIFICACAO}
+                </div>
+                <br style="clear:both" />
+                <div id="participar_ws" align="center" style="margin-top:10px;margin-bottom:10px;background-color:#FF9; padding-bottom:5px;padding-top:5px;display:{MOSTRA_WS}">
+                <label for="ir_ws" class="interna"><input type="checkbox" id="ir_ws" name="ir_ws" checked="checked"/><font color="#FF0000">Desejo participar do WORKSHOP</font></label>
+                </div>
+                <div id="head3" class="interna">
+                    <img style="clear:both" src="_ferramentas/workshop/images/passo-3.png"/>
+                </div>
+                <div id="remessa" class="interna extramargin">
+                    <p class="detalhe">FORMAS DE RECEBIMENTO DO KIT DIDÁTICO</p>
+                    {REMESSA_KIT_DIDATICO}
+                </div>
+                <div id="head4" class="interna">
+                    <img src="_ferramentas/workshop/images/passo-4.png"/>
+                </div>
+                <div id="pagamento" class="interna">
+                    <p class="detalhe">ESCOLHA UMA FORMA DE PAGAMENTO</p>
+                    <ul class="main">
+                        <li><input class="opt" type="radio" id="boleto" style="font-size:22px" name="pagto" checked="checked"/><img src="_ferramentas/workshop/images/opt_boleto.png" /></li>
+                        <li><input class="opt" type="radio" id="mp" style="font-size:22px" name="pagto"/><img src="_ferramentas/workshop/images/opt_mercadopago.png" /></li>
+                        <li><input class="opt" type="radio" id="pagseguro" style="font-size:22px" name="pagto"/><img src="_ferramentas/workshop/images/opt_pagseguro.png" /></li>
+                    </ul>
+                </div>
+              </div> <!-- END OF FRAME -->
+            </td>
+            <td valign="top" class="tdx" id="resumo">
+            <div id="frame2" style="display:none">
+                <div id="head5" class="interna">
+                    <img src="_ferramentas/workshop/images/passo-5.png"/>
+                </div>
+                <div id="evento" class="resumo">
+                    {EVENTO}<br />
+                    {LOCAL}<br />
+                    {DATA}
+                </div>
+                <hr style="border:1px dashed gray;margin-top:10px;margin-bottom:10px;" />
+                <p class="success">{AVISO}</p>
+                <div id="resumo" class="interna">
+                    <ul class="main">
+                        <li id="valor_licenciamento">Licenciamento:{VALOR_TOTAL}</li>
+                        <li id="valor_frete">Valor do frete:R$0.00</li>
+                        <li id="valor_ws">Ingresso do GW:{VALOR_WS}</li>
+                    </ul>
+                    <hr style="border:1px dashed gray;margin-top:10px;margin-bottom:10px;" />
+                    <!--
+                    <div id="div_voucher" style="display:block;"><p class="detalhe">SE VOCÊ POSSUI UM CUPOM, DIGITE-O AQUI:</p>
+                        <input type="text" id="voucher" name="voucher" placeholder="Cupom de desconto" size="20" />&nbsp;<a class="tsc_awb_medium tsc_flat" href="#" id="aplicar_voucher">&nbsp;aplicar&nbsp;</a>
+                    </div>
+                    -->
+                    <hr style="border:1px dashed gray;margin-top:10px;margin-bottom:10px;" />
+                    <div id="termos" class="interna">
+                        <ul class="main"><li style="font-weight:bold;"><label for="concordo" class="checkbox"><input type="checkbox" id="concordo" style="font-size:22px" name="concordo" />Li e concordo com os <a href="#dv_termos" id="lnk_termos" name="lnk_termos">Termos e Condições</a>.</label></li></ul>
+                    </div>
+                    <hr style="border:1px dashed gray;margin-top:10px;margin-bottom:10px;" />
+                    <div id="finish" style="display:inline-block;text-align:center;width:100%;">
+                        <a href="javascript:void(0)" id="bt_finish" class="btn btn-success">&nbsp;Ir para Pagamento&nbsp;</a>
+                    </div>
+                </div>
+				</div> <!-- END OF FRAME 2 -->
+            </td>
+        </tr>
+    </table>
+    </div> <!-- FINAL DA FRAME DE PAGO -->
+</div>
+<div id="dv_termos" style="display:none">
+<div>
+<h4>Termos e Condições</h4>
+<p><span class="icon-check"></span>  Nas solicitações de envio por correio, caso a correspondência volte para a  Central BS por motivos de endereço errado/insuficiente ou ausência de alguém  para recebê-lo, o professor deverá arcar com o custo de um novo envio para  receber seu material</p>
+<p><span class="icon-check"></span>  O envio dos materiais solicitados por correio acontece somente após o término  da rodada de eventos (Plantão ou Workshop)</p>
+<p><span class="icon-check"></span>  Ao optar por recebimento do material no evento (Plantão ou Workshop), o  professor deve retirá-lo única e exclusivamente no local ou enviar autorização  por escrito para que seja retirado por terceiros. <br />
+  Em  caso de não comparecimento não há reembolso do valor da inscrição. <br />
+  Importante:  Caso o material não seja retirado do evento, o professor deverá arcar com o  custo do envio por correio.</p>
+  </div>
+=======
+<form id="frm_resume" name="frm_Resume" method="post" action="">
+<input type="hidden" id="h_action" name="h_action" value="0" />
+<input type="hidden" id="h_transacao" name="h_transacao" value="{UUID}" />
+<input type="hidden" id="h_progs" name="h_progs" value="{QTD_PROGS}" />
+<input type="hidden" id="h_valor_por_programa" name="h_valor_por_programa" value="{VALOR_1}" />
+<input type="hidden" id="h_valor_boleto" name="h_valor_boleto" value="" />
+<input type="hidden" id="h_valor_cartao" name="h_valor_cartao" value="" />
+<input type="hidden" id="h_valor_referencia_ws" name="h_valor_referencia_ws" value="{VALOR_REF_WS}" />
+<input type="hidden" id="h_valor_ws" name="h_valor_ws" value="" />
+<input type="hidden" id="h_valor_cobrado" name="h_valor_cobrado" value="" />
+<input type="hidden" id="h_retirada_kit" name="h_retirada_kit" value="" />
+<input type="hidden" id="h_nivel_bonus" name="h_nivel_bonus" value="{NIVEL_BONUS}" />
+<input type="hidden" id="h_valor_frete" name="h_valor_frete" value="0" />
+<input type="hidden" id="h_formaPagto" name="h_formaPagto" value="boleto" />
+<input type="hidden" id="h_cpf" name="h_cpf" value="" />
+<input type="hidden" id="h_siteid" name="h_siteid" value="0" />
+<input type="hidden" id="h_evoid" name="h_evoid" value="0" />
+<input type="hidden" id="h_nome" name="h_nome" value="{CLIENTE}" />
+<input type="hidden" id="h_email" name="h_email" value="0" />
+<input type="hidden" id="h_logradouro" name="h_logradouro" value="" />
+<input type="hidden" id="h_numero" name="h_numero" value="" />
+<input type="hidden" id="h_complemento" name="h_complemento" value="" />
+<input type="hidden" id="h_bairro" name="h_bairro" value="" />
+<input type="hidden" id="h_cidade" name="h_cidade" value="" />
+<input type="hidden" id="h_uf" name="h_uf" value="" />
+<input type="hidden" id="h_cep" name="h_cep" value="" />
+<input type="hidden" id="h_evento_descricao" name="h_evento_descricao" value="{EVENTO_NOME}" />
+<input type="hidden" id="h_evento_id" name="h_evento_id" value="{EVENTO_ID}" />
+<input type="hidden" id="h_cnab" name="h_cnab" value="{CNAB}" />
+<input type="hidden" id="h_sigla" name="h_sigla" value="{SIGLA}" />
+<input type="hidden" id="h_finalizado" name="h_finalizado" value="0" />
+</form>
+<div id="table_end" style="display:none;margin-top:15px;">
+    	<table width="350" align="center">
+        	<tr><td style="font-size:16px">Faça agora o seu pagamento!</td></tr>
+            <tr><td id="botao" style="padding:25px;"></td></tr>
+        </table>
+    </div>
+<div style="font-size:1.8em; font-family:Verdana, Geneva, sans-serif" align="center">{NOME_EVENTO}</div>
+<div id="frame" class="" align="center">
+<div id="pagto-final">
+    <table class="frame">
+        <tr>
+            <td valign="top" id="dados_pessoais"    >
+                <div id="head" class="interna">
+                    <img src="_ferramentas/workshop/images/passo-1.png"/>
+                </div>
+                <div id="login" class="interna">
+                    <p class="detalhe">INICIE INFORMANDO OS DADOS ABAIXO:</p>
+                    <div style="float:left">
+                        <ul class="main">
+                            <li><input type="text" size="30" id="cpf" name="cpf" alt="cpf" value="" placeholder="Digite seu CPF" /></li>
+                            <li><input type="password" size="30" id="password" name="password" value="" placeholder="Digite sua senha" /></li>
+                        </ul>
+                    </div>
+                    <div style="float:left;padding:1em;">
+                        <a class="tsc_awb_medium tsc_flat" id="lnk_login" href="javascript:void(0)">&nbsp;checar&nbsp;</a>
+                    </div>
+                    <br style="clear:both" />
+                </div>
+                <div id="response" class="interna"><a href="recuperar-senha" style="font-size:10px; margin-left:1.5em">Esqueci minha senha</a></div>
+                <!--<div id="endereco" class="interna"></div>-->
+                <hr style="border:1px dashed gray;margin-top:10px;margin-bottom:10px;clear:both;" />
+                <div class="interna" id="opt_remessa" style="display:none">
+                <label for="chk_entrega" class="checkbox"><input type="checkbox" id="chk_entrega" name="chk_entrega" checked="checked"/>O endereço acima é o endereço de remessa</label>
+                </div>
+                <div id="frame_entrega" class="interna" style="display:none">
+                	<span style="font-size:1.2em">Endereço para Entrega</span>
+                	<ul class="main" id="novo_endereco_remessa">
+	                    <li><input type="text" id="novo_cep" size="8" value="" placeholder="Digite o CEP" alt="novo_cep" class="input-small" />&nbsp;<a class="tsc_awb_medium tsc_flat" id="lnk_checar_cep" href="#">&nbsp;checar&nbsp;</a></li>
+                        <li class="interna extramargin"><input class="novo_ende" type="text" id="novo_logradouro" size="8" value="" placeholder="Digite o endereço" style="display:none" /></li>
+                        <li class="interna extramargin"><input class="novo_ende" type="text" id="novo_numero" size="8" value="" placeholder="Digite o número" style="display:none" /></li>
+                        <li><input class="novo_ende" type="text" id="novo_complemento" size="10" value="" placeholder="complemento" style="display:none" /></li>
+                        <li class="interna extramargin"><input class="novo_ende" type="text" id="novo_bairro" size="8" value="" placeholder="Digite o bairro" style="display:none" /></li>
+                        <li class="interna extramargin"><input class="novo_ende uneditable-input" type="text" id="novo_cidade" size="8" value="" placeholder="Digite o cidade" style="display:none;" readonly /></li>
+                        <li class="interna extramargin"><input class="novo_ende uneditable-input" type="text" id="novo_uf" size="8" value="" placeholder="Digite o estado" style="display:none;" readonly /></li>
+                        </ul>
+                </div>
+                <p class="success">{AVISO}</p>
+            </td>
+            <td class="" valign="top" id="dados_pagamento">
+            <div id="frame1" style="display:none">
+                <div id="head2" class="interna">
+                    <img src="_ferramentas/workshop/images/passo-2.png"/>
+                </div>
+                <p class="detalhe">*DESEJO RENOVAR MEU LICENCIAMENTO NOS PROGRAMAS ABAIXO:</p>
+                <div id="certificacao" class="interna extramargin">
+                    {CERTIFICACAO}
+                </div>
+                <br style="clear:both" />
+                <div id="participar_ws" align="center" style="margin-top:10px;margin-bottom:10px;background-color:#FF9; padding-bottom:5px;padding-top:5px;display:{MOSTRA_WS}">
+                <label for="ir_ws" class="interna"><input type="checkbox" id="ir_ws" name="ir_ws" checked="checked"/><font color="#FF0000">Desejo participar do WORKSHOP</font></label>
+                </div>
+                <div id="head3" class="interna">
+                    <img style="clear:both" src="_ferramentas/workshop/images/passo-3.png"/>
+                </div>
+                <div id="remessa" class="interna extramargin">
+                    <p class="detalhe">FORMAS DE RECEBIMENTO DO KIT DIDÁTICO</p>
+                    {REMESSA_KIT_DIDATICO}
+                </div>
+                <div id="head4" class="interna">
+                    <img src="_ferramentas/workshop/images/passo-4.png"/>
+                </div>
+                <div id="pagamento" class="interna">
+                    <p class="detalhe">ESCOLHA UMA FORMA DE PAGAMENTO</p>
+                    <ul class="main">
+                        <li><input class="opt" type="radio" id="boleto" style="font-size:22px" name="pagto" checked="checked"/><img src="_ferramentas/workshop/images/opt_boleto.png" /></li>
+                        <li><input class="opt" type="radio" id="mp" style="font-size:22px" name="pagto"/><img src="_ferramentas/workshop/images/opt_mercadopago.png" /></li>
+                        <li><input class="opt" type="radio" id="pagseguro" style="font-size:22px" name="pagto"/><img src="_ferramentas/workshop/images/opt_pagseguro.png" /></li>
+                    </ul>
+                </div>
+              </div> <!-- END OF FRAME -->
+            </td>
+            <td valign="top" class="tdx" id="resumo">
+               <div id="profacad" style="display:none;">
+                   <div id="head5" class="interna">
+                       <img src="_ferramentas/workshop/images/passo-5.png"/>
+                   </div>
+                   <span id="descricao" class="interna" >
+                           <p style="margin-left: 10px;margin-right: 20px;font-size:11px;line-height: 100%;">Escreva o nome de todas as academias em que você trabalha. Para adicionar  cada uma escreva o nome e depois tecle 'enter'.</p>
+                   </span>
+                    <span id="academias" style="margin-left: 10px;display:block;">
+                            <input type="text" id="demo-input-facebook-theme" class="lista_academias" />
+                            <label id="nao_dou_aula" style="font-size: 11px;" class="checkbox"><input type="checkbox" id="sem_academia" />Atualmente não ministro aula em nenhuma academia </label>
+                    </span>
+               </div>
+              <div id="frame2" style="display:none">
+                <div id="head6" class="interna">
+                    <img src="_ferramentas/workshop/images/passo-6.png"/>
+                </div>
+                <div id="evento" class="resumo">
+                    {EVENTO}<br />
+                    {LOCAL}<br />
+                    {DATA}
+                </div>
+                <hr style="border:1px dashed gray;margin-top:10px;margin-bottom:10px;" />
+                <div id="resumo" class="interna">
+                    <ul class="main">
+                        <li id="valor_licenciamento">Licenciamento:{VALOR_TOTAL}</li>
+                        <li id="valor_frete">Valor do frete:R$0.00</li>
+                        <li id="valor_ws">Ingresso do GW:{VALOR_WS}</li>
+                    </ul>
+                    <hr style="border:1px dashed gray;margin-top:10px;margin-bottom:10px;" />
+                    <!--
+                    <div id="div_voucher" style="display:block;"><p class="detalhe">SE VOCÊ POSSUI UM CUPOM, DIGITE-O AQUI:</p>
+                        <input type="text" id="voucher" name="voucher" placeholder="Cupom de desconto" size="20" />&nbsp;<a class="tsc_awb_medium tsc_flat" href="#" id="aplicar_voucher">&nbsp;aplicar&nbsp;</a>
+                    </div>
+                    -->
+                    <hr style="border:1px dashed gray;margin-top:10px;margin-bottom:10px;" />
+                    <div id="termos" class="interna">
+                        <ul class="main"><li style="font-weight:bold;"><label for="concordo" class="checkbox"><input type="checkbox" id="concordo" style="font-size:22px" name="concordo" />Li e concordo com os <a href="#dv_termos" id="lnk_termos" name="lnk_termos">Termos e Condições</a>.</label></li></ul>
+                    </div>
+                    <hr style="border:1px dashed gray;margin-top:10px;margin-bottom:10px;" />
+                    <div id="finish" style="display:inline-block;text-align:center;width:100%;">
+                        <a href="javascript:void(0)" id="bt_finish" class="btn btn-success">&nbsp;Ir para Pagamento&nbsp;</a>
+                    </div>
+                </div>
+				</div> <!-- END OF FRAME 2 -->
+            </td>
+        </tr>
+    </table>
+    </div> <!-- FINAL DA FRAME DE PAGO -->
+</div>
+<div id="dv_termos" style="display:none">
+<div>
+<h4>Termos e Condições</h4>
+<p><span class="icon-check"></span>  Nas solicitações de envio por correio, caso a correspondência volte para a  Central BS por motivos de endereço errado/insuficiente ou ausência de alguém  para recebê-lo, o professor deverá arcar com o custo de um novo envio para  receber seu material</p>
+<p><span class="icon-check"></span>  O envio dos materiais solicitados por correio acontece somente após o término  da rodada de eventos (Plantão ou Workshop)</p>
+<p><span class="icon-check"></span>  Ao optar por recebimento do material no evento (Plantão ou Workshop), o  professor deve retirá-lo única e exclusivamente no local ou enviar autorização  por escrito para que seja retirado por terceiros. <br />
+  Em  caso de não comparecimento não há reembolso do valor da inscrição. <br />
+  Importante:  Caso o material não seja retirado do evento, o professor deverá arcar com o  custo do envio por correio.</p>
+  </div>
+>>>>>>> origin/master
+</div>

@@ -1,0 +1,45 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Documento sem título</title>
+<link href="_ferramentas/workshop/css/admin.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="_ferramentas/workshop/js/groundworks_admin.js"></script>
+</head>
+
+<body>
+<div id="frame">
+<div id="col_left">
+	<ul id="eventos">
+    	{LISTA_EVENTOS}
+    </ul>
+</div>
+<div id="col_right">
+	<ul id="lista">
+    	<li><label><input type="checkbox" value="BA" id="BA" />BODYATTACK&trade;</label></li>
+        <li><label><input type="checkbox" value="BB" id="BB" />BODYBALLANCE&trade;</label></li>
+        <li><label><input type="checkbox" value="BC" id="BC" />BODYCOMBAT&trade;</label></li>
+        <li><label><input type="checkbox" value="BJ" id="BJ" />BODYJAM&trade;</label></li>
+        <li><label><input type="checkbox" value="BP" id="BP" />BODYPUMP&trade;</label></li>
+        <li><label><input type="checkbox" value="BS" id="BS" />BODYSTEP&trade;</label></li>
+        <li><label><input type="checkbox" value="CX" id="CX" />CXWORX&trade;</label></li>
+        <li><label><input type="checkbox" value="RPM" id="RPM" />RPM&trade;</label></li>
+        <li><label><input type="checkbox" value="SB" id="SB" />SHBAM&trade;</label></li>
+        <li><label><input type="checkbox" value="PJ" id="PJ" />POWER JUMP</label></li>
+    </ul>
+    <ul id="vagas">
+    	<li>
+        	<label><input class="vagas" id="ba_vagas"type="text" size="3" /> Vagas disponíveis</label>
+        </li>
+    </ul>
+    <input type="hidden" id="descricao" />
+    <input type="hidden" id="data" />
+    <input type="hidden" id="evento_id" />
+</div>
+<hr/>
+<div id="buttons">
+	<a class="btn btn-primary" href="javascript:void)" id="aplicar">Aplicar</a>
+</div>
+</div>
+</body>
+</html>

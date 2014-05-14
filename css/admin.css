@@ -1,0 +1,36 @@
+@charset "UTF-8";
+/* CSS Document */
+	ul li {
+		text-decoration:none;
+		list-style-type:none;	
+		padding:5px;
+	}
+	#frame {
+		width: 100%;
+		height: 500px;
+		border: solid 1px #c0c0c0;
+		padding:10px;
+	}
+	#col_left {
+		position:relative;
+		float:left;
+		width:50%;
+		height:450px;
+		overflow:auto;
+	}
+	#col_right {
+		position:relative;
+		float: right;
+		display:block;
+		width: 50%;
+		
+	}
+	#buttons {
+		text-align:right;
+		display:block;
+		margin-right:10px;
+	}
+	
+	hr {
+		clear:both;
+	}
